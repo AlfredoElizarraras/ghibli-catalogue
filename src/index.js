@@ -1,12 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import Root from './components/Root';
+import configureStore from './redux/store';
 import './reset.css';
 import './index.css';
-import Root from './components/Root';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Root />
-  </React.StrictMode>,
+const store = configureStore();
+
+render(
+  <Root store={store} />,
   document.getElementById('root'),
 );
