@@ -1,11 +1,10 @@
+import React from 'react';
 import './App.css';
 
-const App = () => {
-  return (
-    <div>
-      Ghilbli Catalogue
-    </div>
-  );
-}
+const App = () => (
+  <div>
+    Ghilbli Catalogue
+  </div>
+);
 
 export default App;
