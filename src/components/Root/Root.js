@@ -1,10 +1,10 @@
 import React from 'react';
-import './App.css';
+import './Root.css';
 
-const App = () => (
+const Root = () => (
   <div>
     Ghilbli Catalogue
   </div>
 );
 
-export default App;
+export default Root;
