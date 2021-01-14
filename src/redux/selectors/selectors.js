@@ -18,9 +18,13 @@ export const getAllOfProperty = (store, property) => {
     return null;
   }
 
-  const allOfProperty = allMovies.map(movie => movie[property]);
+  const allOnce = {};
+  allMovies.map(movie => {
+    allOnce[movie[property]] = 1;
+    return null;
+  });
 
-  return allOfProperty.filter(prop => (allOfProperty.indexOf(prop) > 0 ? prop : null));
+  return Object.keys(allOnce);
 };
 
 export const getMoviesByAllFilters = (store, filters) => {
