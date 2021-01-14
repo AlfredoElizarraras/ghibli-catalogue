@@ -3,9 +3,8 @@ import { Provider } from 'react-redux';
 import PropTypes from 'prop-types';
 import MoviesList from '../../containers/MoviesList';
 import request from '../../utils/requests';
-import addMovies from '../../redux/actions/moviesActions';
 
-const Root = ({ store }) => {
+const Root = ({ store, addMovies }) => {
   useEffect(async () => {
     const response = request();
     response.then(data => {
@@ -22,6 +21,7 @@ const Root = ({ store }) => {
 
 Root.propTypes = {
   store: PropTypes.object.isRequired, /* eslint-disable-line react/forbid-prop-types */
+  addMovies: PropTypes.func.isRequired,
 };
 
 export default Root;
