@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './filter.module.css';
 
 class Filter extends React.Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class Filter extends React.Component {
     const { data, type } = this.props;
     return (
       <>
-        <label htmlFor={type}>
+        <label htmlFor={type} className={styles.filter}>
           Fiter by
           {' '}
           { type }

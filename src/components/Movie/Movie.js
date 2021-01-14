@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './movie.module.css';
 
 const Movie = ({ movie }) => (
-  <div>
+  <div className={styles.movie}>
     <span>{ movie.title }</span>
     <span>{ movie.description }</span>
     <span>{ movie.director }</span>
