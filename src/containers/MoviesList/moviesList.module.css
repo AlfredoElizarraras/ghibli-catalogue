@@ -1,0 +1,10 @@
+.filters {
+  display: flex;
+  align-items: center;
+}
+
+.movies {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
