@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Movie from '../../components/Movie';
 import Filter from '../../components/Filter';
-import styles from './movieList.module.css';
+import styles from './moviesList.module.css';
 
 const MoviesList = ({
   movies = [], directors, producers, changeFilter,
