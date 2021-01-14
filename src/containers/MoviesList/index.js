@@ -6,8 +6,10 @@ import { getMoviesByAllFilters, getAllOfProperty } from '../../redux/selectors/s
 const mapStateToProps = state => {
   const { filters } = state;
   const movies = getMoviesByAllFilters(state, filters);
+  const directors = getAllOfProperty(state, 'director');
+  const producers = getAllOfProperty(state, 'producer');
 
-  return { movies };
+  return { movies, directors, producers };
 };
 
-export default connect(mapStateToProps, { changeFilter, getAllOfProperty })(MovieList);
+export default connect(mapStateToProps, { changeFilter })(MovieList);
