@@ -37,7 +37,7 @@ export const getMoviesByAllFilters = (store, filters) => {
     ],
   };
 
-  Object.keys(filters).forEach((filter) => {
+  Object.keys(filters).forEach(filter => {
     const search = {
       filter,
       value: filters[filter],
