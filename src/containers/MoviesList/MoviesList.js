@@ -5,18 +5,16 @@ import Filter from '../../components/Filter';
 import styles from './moviesList.module.css';
 
 const MoviesList = ({
-  movies = [], directors, producers, changeFilter,
+  movies = [], directors, changeFilter,
 }) => {
   const handleFilterChange = filter => {
-    const { name, value } = filter;
-    changeFilter({ name, value });
+    changeFilter(filter);
   };
 
   return (
     <>
       <div className={styles.filters}>
         <Filter type="director" handleFilterChange={handleFilterChange} data={directors} />
-        <Filter type="producer" handleFilterChange={handleFilterChange} data={producers} />
       </div>
       <div className={styles.movies}>
         {
@@ -43,9 +41,6 @@ MoviesList.propTypes = {
     }),
   ).isRequired,
   directors: PropTypes.arrayOf(
-    PropTypes.string,
-  ).isRequired,
-  producers: PropTypes.arrayOf(
     PropTypes.string,
   ).isRequired,
   changeFilter: PropTypes.func.isRequired,
