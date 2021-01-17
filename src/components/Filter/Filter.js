@@ -7,20 +7,21 @@ class Filter extends React.Component {
     super(props);
 
     this.state = {
-      selected: 'ALL',
+      filter: 'ALL',
     };
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange = filter => {
-    const { handleFilterChange, type } = this.props;
-    handleFilterChange({ [type]: filter });
-    this.setState({ selected: filter });
+    const { handleFilterChange } = this.props;
+    handleFilterChange(filter);
+    this.setState({ filter });
   }
 
   render() {
-    const { selected } = this.state;
+    const { filter } = this.state;
     const { data, type } = this.props;
+
     return (
       <>
         <label htmlFor={type} className={styles.filter}>
@@ -32,11 +33,11 @@ class Filter extends React.Component {
             type={type}
             name={type}
             onChange={e => this.handleChange(e.target.value)}
-            value={selected}
+            value={filter}
           >
             <option>ALL</option>
             {data.map(dataInfo => (
-              <option key={dataInfo} value={dataInfo}>
+              <option key={`${dataInfo}${type.charAt(0).toUpperCase() + type.slice(1)}`} value={dataInfo}>
                 {dataInfo.toUpperCase()}
               </option>
             ))}
