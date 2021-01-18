@@ -3,3 +3,57 @@
   flex-direction: column;
   margin: 1rem;
 }
+
+.movieInfo {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.movieInfoHighLights {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 2rem;
+  height: 50px;
+  background-color: #90caf9;
+  font-size: 1.5rem;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.movieImage {
+  height: 500px;
+  width: 400px;
+}
+
+.arrow {
+  margin-right: 2rem;
+  height: 30px;
+  width: 30px;
+}
+
+.separator {
+  margin: 1rem 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .movie {
+    flex-direction: row;
+  }
+
+  .imageContainer {
+    width: 50%;
+  }
+}
