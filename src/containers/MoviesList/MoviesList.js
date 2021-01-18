@@ -1,12 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Movie from '../../components/Movie';
+import {
+  Link,
+  useRouteMatch,
+} from 'react-router-dom';
 import Filter from '../../components/Filter';
+import movieImage from '../../utils/data';
 import styles from './moviesList.module.css';
 
 const MoviesList = ({
   movies = [], directors, changeFilter,
 }) => {
+  const { url } = useRouteMatch();
+
   const handleFilterChange = filter => {
     changeFilter(filter);
   };
@@ -19,7 +25,15 @@ const MoviesList = ({
       <div className={styles.movies}>
         {
           movies.map(movie => (
-            <Movie key={movie.id} movie={movie} />
+            <div key={movie.id}>
+              <Link to={`${url}${movie.id}`}>
+                <img src={movieImage[movie.id]} alt="Totoro" />
+                {movie.title}
+              </Link>
+              <span>
+                {movie.director}
+              </span>
+            </div>
           ))
         }
       </div>
