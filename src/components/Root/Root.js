@@ -1,20 +1,26 @@
 import React, { useEffect } from 'react';
 import { Provider } from 'react-redux';
 import PropTypes from 'prop-types';
-import MoviesList from '../../containers/MoviesList';
+import Navigation from '../Navigation';
 import request from '../../utils/requests';
+import { getMovies } from '../../redux/selectors/selectors';
 
 const Root = ({ store, addMovies }) => {
   useEffect(async () => {
-    const response = request();
-    response.then(data => {
-      addMovies(data.data);
-    });
+    const movies = getMovies(store);
+    if (!movies) {
+      const response = request();
+      response.then(data => {
+        addMovies(data.data);
+      });
+    } else {
+      addMovies(movies);
+    }
   }, []);
 
   return (
     <Provider store={store}>
-      <MoviesList />
+      <Navigation />
     </Provider>
   );
 };
