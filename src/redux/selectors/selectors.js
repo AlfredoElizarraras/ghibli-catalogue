@@ -1,5 +1,4 @@
-// Selectors
-const getMovies = store => store.movies;
+export const getMovies = store => store.movies;
 
 export const getMoviesByFilter = (store, search) => {
   const allMovies = getMovies(store);
@@ -29,4 +28,13 @@ export const getAllOfProperty = (store, property) => {
   });
 
   return Object.keys(allOnce);
+};
+
+export const getMovie = (store, movieId) => {
+  const allMovies = getMovies(store);
+  if (!allMovies) {
+    return [];
+  }
+
+  return allMovies.filter(movie => movie.id === movieId);
 };
