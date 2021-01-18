@@ -25,8 +25,8 @@ const MoviesList = ({
       <div className={styles.movies}>
         {
           movies.map(movie => (
-            <div key={movie.id}>
-              <Link to={`${url}${movie.id}`}>
+            <div className={styles.movie} key={movie.id}>
+              <Link className={styles.imageContainer} to={`${url}${movie.id}`}>
                 <img src={movieImage[movie.id]} alt="Totoro" />
                 {movie.title}
               </Link>
