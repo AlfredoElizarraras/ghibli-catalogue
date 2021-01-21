@@ -5,8 +5,8 @@ import {
   Route,
   useRouteMatch,
 } from 'react-router-dom';
-import MovieList from '../../containers/MoviesList';
-import Movie from '../Movie';
+import MovieList from '../MoviesList';
+import Movie from '../../components/Movie';
 
 const Navigation = () => {
   const { path } = useRouteMatch();
