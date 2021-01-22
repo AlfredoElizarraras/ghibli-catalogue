@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './filter.module.css';
 
-const Filter = ({ type, handleFilterChange, data }) => {
-  const [filter, setFilter] = useState('ALL');
-
+const Filter = ({
+  type, handleFilterChange, data, filter,
+}) => {
   const handleChange = filter => {
     handleFilterChange(filter);
-    setFilter(filter);
   };
 
   return (
@@ -41,6 +40,7 @@ Filter.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.string,
   ).isRequired,
+  filter: PropTypes.string.isRequired,
 };
 
 export default Filter;

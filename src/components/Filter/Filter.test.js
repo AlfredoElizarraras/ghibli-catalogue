@@ -9,11 +9,13 @@ describe('Filter', () => {
       handleFilterChange: filter => filter,
       type: 'director',
       data: ['director 1', 'director 2', 'director 3'],
+      filter: 'ALL',
     };
     render(<Filter
       handleFilterChange={props.handleFilterChange}
       type={props.type}
       data={props.data}
+      filter={props.filter}
     />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
