@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MoviesList should render without crashing 1`] = `
+Array [
+  <div
+    className="filters"
+  >
+    <label
+      className="filter"
+      htmlFor="director"
+    >
+      Fiter by
+       
+      director
+      <select
+        id="director"
+        name="director"
+        onChange={[Function]}
+        type="director"
+        value="ALL"
+      >
+        <option>
+          ALL
+        </option>
+        <option
+          value="director 1"
+        >
+          DIRECTOR 1
+        </option>
+        <option
+          value="director 2"
+        >
+          DIRECTOR 2
+        </option>
+        <option
+          value="director 3"
+        >
+          DIRECTOR 3
+        </option>
+      </select>
+    </label>
+  </div>,
+  <div
+    className="movies"
+  >
+    <div
+      className="movie"
+    >
+      <a
+        className="imageContainer"
+        href="/1"
+        onClick={[Function]}
+      >
+        <img
+          alt="Totoro"
+        />
+        Movie 1
+      </a>
+      <span>
+        director 1
+      </span>
+    </div>
+    <div
+      className="movie"
+    >
+      <a
+        className="imageContainer"
+        href="/2"
+        onClick={[Function]}
+      >
+        <img
+          alt="Totoro"
+        />
+        Movie 2
+      </a>
+      <span>
+        director 2
+      </span>
+    </div>
+    <div
+      className="movie"
+    >
+      <a
+        className="imageContainer"
+        href="/3"
+        onClick={[Function]}
+      >
+        <img
+          alt="Totoro"
+        />
+        Movie 3
+      </a>
+      <span>
+        director 3
+      </span>
+    </div>
+    <div
+      className="movie"
+    >
+      <a
+        className="imageContainer"
+        href="/4"
+        onClick={[Function]}
+      >
+        <img
+          alt="Totoro"
+        />
+        Movie 4
+      </a>
+      <span>
+        director 3
+      </span>
+    </div>
+  </div>,
+]
+`;

@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movie should render without crashing 1`] = `
+Array [
+  <nav
+    className="navbar"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <img
+        alt="back to movies"
+        className="arrow"
+        src="https://cdn.iconscout.com/icon/free/png-512/back-arrow-1767531-1502435.png"
+      />
+    </a>
+    <h1>
+      Movie title
+    </h1>
+  </nav>,
+  <div
+    className="movie"
+  >
+    <div
+      className="imageContainer"
+    >
+      <img
+        alt="Movie title"
+        className="movieImage"
+      />
+    </div>
+    <div
+      className="movieInfo"
+    >
+      <div
+        className="movieInfoHighLights"
+      >
+        <div>
+          <div>
+            <div>
+              Release year
+            </div>
+            Movie release date
+          </div>
+          <div
+            className="separator"
+          />
+          <div>
+            <div>
+              Score:
+            </div>
+            Movie rate score
+            / 100
+          </div>
+        </div>
+        <div>
+          <div>
+            <div>
+              Director:
+            </div>
+            Movie director
+          </div>
+          <div
+            className="separator"
+          />
+          <div>
+            <div>
+              Producer:
+            </div>
+            Movie producer
+          </div>
+        </div>
+      </div>
+      <div>
+        Movie description
+      </div>
+    </div>
+  </div>,
+]
+`;
