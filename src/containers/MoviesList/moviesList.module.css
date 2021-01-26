@@ -1,0 +1,63 @@
+.filters {
+  display: flex;
+  align-items: center;
+}
+
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.movie {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  width: calc(50% - 2rem);
+  height: 360px;
+  border: #000;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 8px 15px -3px rgba(184, 184, 184, 1);
+  -moz-box-shadow: 2px 8px 15px -3px rgba(184, 184, 184, 1);
+  box-shadow: 2px 8px 15px -3px rgba(184, 184, 184, 1);
+}
+
+.movies > div:hover,
+.movies > div:active {
+  -webkit-box-shadow: 0 10px 13px -7px #000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0 10px 13px -7px #000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.movies > div > span {
+  display: flex;
+  flex-flow: row-reverse;
+  margin-right: 0.5rem;
+  margin-bottom: 0.25rem;
+  color: #757575;
+}
+
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  padding-top: 1rem;
+  height: 280px;
+}
+
+.movies > div > a > img {
+  margin-bottom: 1rem;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+@media only screen and (min-width: 600px) {
+  .movie {
+    width: calc(20% - 2rem);
+  }
+}
